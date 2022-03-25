@@ -1,0 +1,494 @@
+@media (max-width: 73em) {
+  .what-img-acc {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .accordion {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .what-img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .ribbon {
+    top: 40%;
+  }
+  .footer-text {
+    font-size: 1.2rem;
+    margin-bottom: 1.6rem;
+  }
+  .footer-logos {
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+  }
+  .icon-text {
+    font-size: 1.2rem;
+  }
+  .footer-logos ion-icon {
+    font-size: 1.6rem;
+  }
+  .blog div {
+    align-self: flex-start;
+  }
+  .blog-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 71em) {
+  .random-text-box {
+    width: 80%;
+  }
+  .random-text {
+    margin-bottom: 4.8rem;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 66em) {
+  .team-icon {
+    padding-bottom: 1.6rem;
+  }
+  .work-icon {
+    padding-bottom: 1.6rem;
+  }
+  .features-box {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.8rem;
+    column-gap: 4.8rem;
+  }
+  .img-mobile {
+    right: 15%;
+  }
+  .story-cont {
+    gap: 2.4rem;
+  }
+  .story-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .story-text {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  .ribbon {
+    top: 38%;
+  }
+  .testimonials-cont {
+    width: 80%;
+    row-gap: 3.2rem;
+    column-gap: 3.2rem;
+  }
+  .testimonial {
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 60em) {
+  .section-stats .container {
+    padding: 0;
+  }
+  .number-stat {
+    font-size: 4.4rem;
+  }
+  .text-stat {
+    font-size: 1.2rem;
+  }
+  .quote-container {
+    gap: 2.4rem;
+    width: 80%;
+  }
+  .chat-icon {
+    width: 7.4rem;
+    height: 7.4rem;
+  }
+  .text-quote blockquote {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  .section-design {
+    height: 55rem;
+  }
+  .img-tablet {
+    width: 40rem;
+  }
+  .img-mobile {
+    width: 15rem;
+  }
+  .section-quote {
+    padding: 3.2rem 0;
+  }
+  .story-cont {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .story {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .ribbon {
+    top: 57%;
+  }
+  .followers {
+    font-size: 1.2rem;
+  }
+  .first-footer {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .first-footer .footer-part {
+    width: 60%;
+  }
+  .first-footer .footer-part2 {
+    width: 60%;
+  }
+  .footer-title1 {
+    margin-bottom: 2.4rem;
+  }
+  .logos img {
+    width: 13%;
+  }
+}
+@media (max-width: 54em) {
+  .random-text-box {
+    width: 90%;
+  }
+  .random-text {
+    margin-bottom: 3.2rem;
+    line-height: 1.4;
+  }
+  .about-img-box {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .about-img-box .img-box {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .text-quote blockquote {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .text-quote div {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  .quote-line {
+    width: 3.2rem;
+  }
+  .quote-name {
+    font-size: 1.4rem;
+  }
+  .work-text1 {
+    font-size: 1.2rem;
+  }
+  .work-text2 {
+    font-size: 1.2rem;
+  }
+  .ribbon {
+    top: 50%;
+  }
+  /* MENU ICON */
+  .menu-btn {
+    display: block;
+    z-index: 10;
+  }
+  .navbar {
+    background-color: #ff8787cc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  /* //////////////////////////////////////////// */
+}
+@media (max-width: 48em) {
+  .hero-description {
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+  }
+  .heading-primary {
+    font-size: 6.2rem;
+    margin-bottom: 1.6rem;
+  }
+  .submenu-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .submenu-list li {
+    padding-top: 0.8rem;
+    padding-bottom: 1.2rem;
+  }
+  .section-random {
+    padding: 4.8rem 0;
+  }
+  .random-text-box {
+    width: 100%;
+  }
+  hr {
+    width: 3.6rem;
+    margin: 2.4rem auto;
+  }
+  .about-img-box {
+    gap: 1.2rem;
+  }
+  .number-stat {
+    font-size: 3.6rem;
+  }
+  .text-stat {
+    font-size: 1rem;
+  }
+  .features-box {
+    width: 100%;
+    row-gap: 3.2rem;
+    column-gap: 3.2rem;
+  }
+  .feature-icon {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+  .section-design {
+    padding: 4.8rem 0;
+    height: 45rem;
+  }
+  .img-tablet {
+    width: 35rem;
+  }
+  .img-mobile {
+    width: 12rem;
+  }
+  .team-img-box {
+    grid-template-columns: 60%;
+    justify-content: center;
+    row-gap: 1.2rem;
+  }
+  .team-name1 {
+    grid-row: 2/3;
+    padding-bottom: 2.4rem;
+  }
+  .team-name2 {
+    grid-row: 4/5;
+    padding-bottom: 2.4rem;
+  }
+  .section-logo {
+    padding: 3.2rem 0;
+  }
+  .section-work {
+    padding-top: 4.8rem;
+  }
+  .work-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    top: 35%;
+  }
+  .work-text1 {
+    font-size: 1rem;
+    top: 50%;
+  }
+  .work-text2 {
+    font-size: 1rem;
+    top: 60%;
+  }
+  .section-testimonials {
+    padding: 4.8rem 0;
+  }
+  .testimonials-cont {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  .testimonial img {
+    width: 8.6rem;
+    height: 8.6rem;
+  }
+  .test-name {
+    margin-bottom: 0.4rem;
+  }
+  .quote-line1 {
+    margin: 0.4rem 0;
+  }
+  .story-cont {
+    gap: 3.2rem;
+  }
+  .story {
+    width: 80%;
+  }
+  .story-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .story-text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding-bottom: 0.4rem;
+  }
+  .ribbon {
+    top: 55%;
+    left: -3%;
+  }
+  .section-map {
+    padding: 3.2rem 0;
+  }
+  .first-footer .footer-part {
+    width: 80%;
+  }
+  .first-footer .footer-part2 {
+    width: 80%;
+  }
+}
+@media (max-width: 43em) {
+  .section-design {
+    height: 45rem;
+  }
+  .img-tablet {
+    width: 31rem;
+  }
+  .img-mobile {
+    width: 11rem;
+  }
+  .story {
+    width: 100%;
+  }
+  .ribbon {
+    top: 60%;
+    left: -3%;
+  }
+}
+@media (max-width: 38em) {
+  .hero-description {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .submenu-list {
+    grid-template-columns: 1fr;
+  }
+  .section-random {
+    padding: 3.2rem 0;
+  }
+  .random-text-box {
+    width: 100%;
+  }
+  hr {
+    width: 3.6rem;
+    margin: 1.6rem auto;
+  }
+  .about-img-box {
+    gap: 1.2rem;
+  }
+  .about-img-box .img-box {
+    width: 80%;
+  }
+  .number-stat {
+    font-size: 3rem;
+  }
+  .text-stat {
+    font-size: 0.8rem;
+  }
+  .features-box {
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
+  }
+  .feature-icon {
+    width: 6.2rem;
+    height: 6.2rem;
+  }
+  .feature-title {
+    margin-bottom: 0.8rem;
+  }
+  .section-design {
+    padding: 3.2rem 0;
+    height: 42rem;
+  }
+  .img-tablet {
+    width: 28rem;
+  }
+  .img-mobile {
+    width: 11rem;
+    right: 13%;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .what-img {
+    max-width: 100%;
+  }
+  .text-quote blockquote {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+  .section-quote {
+    padding: 2.4rem 0;
+  }
+  .quote-line {
+    width: 2.4rem;
+  }
+  .quote-name {
+    font-size: 1rem;
+  }
+  .team-img-box {
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 1.2rem;
+  }
+  .team-name1 {
+    grid-row: 2/3;
+    padding-bottom: 2.4rem;
+  }
+  .team-name2 {
+    grid-row: 4/5;
+    padding-bottom: 2.4rem;
+  }
+  .section-logo {
+    padding: 2.4rem 0;
+  }
+  .logos img {
+    width: 14%;
+  }
+  .section-work {
+    padding-top: 3.2rem;
+  }
+  .work-icon {
+    height: 2rem;
+    width: 2rem;
+    top: 35%;
+  }
+  .work-text1 {
+    font-size: 0.8rem;
+    top: 50%;
+  }
+  .work-text2 {
+    font-size: 0.8rem;
+    top: 65%;
+  }
+  .image-quote {
+    width: 20%;
+  }
+  .section-testimonials {
+    padding: 3.2rem 0;
+  }
+  .testimonials-cont {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .testimonial img {
+    width: 9.8rem;
+    height: 9.8rem;
+  }
+  .section-map {
+    padding: 2.4rem 0;
+  }
+  .first-footer .footer-part {
+    width: 90%;
+  }
+  .first-footer .footer-part2 {
+    width: 90%;
+  }
+}
