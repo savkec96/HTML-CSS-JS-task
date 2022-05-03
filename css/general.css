@@ -8,7 +8,8 @@ html {
 }
 body {
   line-height: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 /* COMPONENTS */
 .container {
@@ -30,7 +31,7 @@ hr {
   margin: 0 auto;
 }
 .heading-description {
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Kaushan Script', cursive;
   font-size: 1.6rem;
   color: #343a40;
   margin-bottom: 1.2rem;
@@ -48,4 +49,19 @@ hr {
 /* FOR SECTIONS RANDOM */
 .section-random {
   padding: 6.4rem 0;
+}
+/* FOR HIDDEN MODAL */
+.hidden {
+  display: none;
+}
+/* FOR HEADER SHADOW */
+header.shadow {
+  background: linear-gradient(#ff8787eb, #e6ca5ceb);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+header.shadow .navbar a {
+  color: #fff;
+}
+header.shadow .logo {
+  color: #fff;
 }

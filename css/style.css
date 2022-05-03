@@ -1,9 +1,14 @@
 /* HEADER STYLE */
 .background-image {
   background-image: linear-gradient(#ff8787cc, #e6ca5cd7),
-    url("../img/hero.jpg");
+    url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 .header div {
   display: flex;
@@ -31,7 +36,7 @@
   cursor: pointer;
   color: #fff;
 }
-.menu-icon[name="close-outline"] {
+.menu-icon[name='close-outline'] {
   display: none;
 }
 /* //////////////////////////////////////////// */
@@ -67,7 +72,7 @@
   color: #ffe066;
 }
 .nav-link::after {
-  content: "";
+  content: '';
   width: 0;
   height: 0.2rem;
   background-color: #ffe066;
@@ -87,7 +92,7 @@
 /* SECTION HERO */
 /* /////////////////////////////////////////////////////////////// */
 .section-hero {
-  padding: 6.4rem 0 1.6rem 0;
+  padding: 14.4rem 0 1.6rem 0;
 }
 .hero {
   max-width: 120rem;
@@ -101,7 +106,7 @@
   margin-bottom: 12.8rem;
 }
 .hero-description {
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Kaushan Script', cursive;
   font-size: 4.4rem;
   color: #fff;
   margin-bottom: 3.2rem;
@@ -276,7 +281,7 @@ div.slide {
       rgba(222, 226, 230, 0.85),
       rgba(241, 243, 245, 0.85)
     ),
-    url("../img/design.jpg");
+    url('../img/design.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -330,18 +335,21 @@ div.slide {
   height: 3rem;
   color: #63e6be;
   padding: 0.8rem;
+  cursor: pointer;
 }
 .acc-title {
   text-transform: uppercase;
   color: #343a40;
   font-size: 1.4rem;
   font-weight: 700;
+  cursor: pointer;
 }
 .arrow {
   width: 2.4rem;
   height: 2.4rem;
   color: #ced4da;
   padding-right: 0.8rem;
+  cursor: pointer;
 }
 .hidden-box {
   grid-column: 1/4;
@@ -358,7 +366,7 @@ div.slide {
 }
 .open .hidden-box {
   display: block;
-  max-height: 17rem;
+  max-height: 10rem;
   overflow-y: scroll;
 }
 .hidden-box::-webkit-scrollbar {
@@ -383,17 +391,42 @@ div.slide {
 .quote-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
   gap: 4.8rem;
+  position: relative;
+  overflow: hidden;
 }
 .left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(-50%, -50%);
   width: 6.2rem;
   height: 6.2rem;
   color: #adb5bd;
+  cursor: pointer;
 }
 .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(50%, -50%);
   width: 6.2rem;
   height: 6.2rem;
   color: #adb5bd;
+  cursor: pointer;
+}
+.slide-quote {
+  position: absolute;
+  width: 70%;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  /* For JS animation! */
+  transition: transform 1s;
 }
 .chat-icon {
   width: 9.8rem;
@@ -425,7 +458,7 @@ div.slide {
 }
 .quote-name {
   display: inline-block;
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Kaushan Script', cursive;
   font-size: 1.6rem;
   color: #343a40;
 }
@@ -508,9 +541,11 @@ div.slide {
 .logos {
   display: flex;
   justify-content: space-between;
+  max-width: 100%;
 }
 .logos img {
-  width: 15%;
+  width: 100%;
+  object-fit: cover;
 }
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION WORK */
@@ -588,6 +623,46 @@ div.slide {
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION QUOTE 2 */
 /* /////////////////////////////////////////////////////////////// */
+.quote-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 18rem;
+  gap: 2.4rem;
+  position: relative;
+  overflow: hidden;
+}
+.slide-quote2 {
+  position: absolute;
+  width: 70%;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  /* For JS animation! */
+  transition: transform 1s;
+}
+.left-arrow2 {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  width: 6.2rem;
+  height: 6.2rem;
+  color: #adb5bd;
+  cursor: pointer;
+}
+.right-arrow2 {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(50%, -50%);
+  width: 6.2rem;
+  height: 6.2rem;
+  color: #adb5bd;
+  cursor: pointer;
+}
 .image-quote {
   width: 15%;
   border-radius: 50%;
@@ -601,7 +676,7 @@ div.slide {
       rgba(228, 232, 236, 0.9),
       rgba(241, 243, 245, 0.85)
     ),
-    url("../img/testimonial.jpg");
+    url('../img/testimonial.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -717,7 +792,7 @@ div.slide {
       rgba(228, 232, 236, 0.9),
       rgba(241, 243, 245, 0.85)
     ),
-    url("../img/map.jpg");
+    url('../img/map.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -868,9 +943,16 @@ div.slide {
   gap: 0.2rem;
   margin-bottom: 1.2rem;
 }
+.gallery-item {
+  overflow: hidden;
+}
 .gallery-item img {
   display: block;
   width: 100%;
+  transition: all 0.4s;
+}
+.gallery-item img:hover {
+  transform: scale(1.2);
 }
 .link-insta:link,
 .link-insta:visited {
@@ -900,4 +982,60 @@ div.slide {
 .link-end:hover,
 .link-end:active {
   color: #e03131;
+}
+/* MODAL DESIGN */
+.close-modal1,
+.close-modal2,
+.close-modal3 {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.modal1,
+.modal2,
+.modal3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background: linear-gradient(#ff8787cc, #e6ca5cd7);
+  padding: 6.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+}
+.heading-description-modal {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.heading-secondary-modal {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.modal-text {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #fff;
 }

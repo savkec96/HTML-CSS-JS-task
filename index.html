@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- //////////////////////////////////////// -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -245,10 +250,10 @@
               <img src="img/accordion.jpg" alt="Team work image" />
             </div>
             <div class="accordion">
-              <div class="item open">
+              <div class="item">
                 <ion-icon class="acc-icon" name="image-outline"></ion-icon>
                 <p class="acc-title">Photography</p>
-                <ion-icon class="arrow" name="chevron-up-outline"></ion-icon>
+                <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
                 <div class="hidden-box">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -299,7 +304,11 @@
                     ipsum dolor sit amet consectetur adipisicing elit. Aut
                     eligendi distinctio esse earum ab asperiores incidunt, sequi
                     adipisci assumenda autem architecto laudantium expedita
-                    aspernatur a odit nulla consectetur quaerat facere.
+                    aspernatur a odit nulla consectetur quaerat facere. Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+                    voluptas, ipsum possimus quisquam, earum inventore, quod aut
+                    excepturi culpa officia soluta. Harum, at. Ea cupiditate
+                    corporis velit eligendi, eum a.
                   </p>
                 </div>
               </div>
@@ -328,17 +337,51 @@
       <section class="section-quote">
         <div class="container quote-container">
           <ion-icon class="left-arrow" name="chevron-back-outline"></ion-icon>
-          <ion-icon class="chat-icon" name="chatbubbles-outline"></ion-icon>
-          <div class="text-quote">
-            <blockquote>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              similique dicta excepturi sapiente error ullam ratione illum
-              voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
-              aspernatur vel nesciunt numquam expedita deserunt itaque."
-            </blockquote>
-            <div>
-              <hr class="quote-line" />
-              <p class="quote-name">Jon Doe</p>
+          <div class="slide-quote">
+            <ion-icon class="chat-icon" name="chatbubbles-outline"></ion-icon>
+            <div class="text-quote">
+              <blockquote>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                similique dicta excepturi sapiente error ullam ratione illum
+                voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
+                aspernatur vel nesciunt numquam expedita deserunt itaque."
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">Jon Doe</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-quote">
+            <ion-icon class="chat-icon" name="desktop-outline"></ion-icon>
+            <div class="text-quote">
+              <blockquote>
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+                molestias distinctio tempore enim, maiores minima impedit et sit
+                neque ea quibusdam. Obcaecati perspiciatis ipsam dolor culpa."
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">Mark Albright</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-quote">
+            <ion-icon
+              class="chat-icon"
+              name="chatbox-ellipses-outline"
+            ></ion-icon>
+            <div class="text-quote">
+              <blockquote>
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, laborum quas. Eaque at eligendi consequuntur animi!
+                A qui itaque officiis obcaecati. Beatae repellat quas quae
+                perspiciatis placeat! Totam, iure debitis!"
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">George Wright</p>
+              </div>
             </div>
           </div>
           <ion-icon
@@ -363,7 +406,7 @@
           <div class="team-img-box">
             <div class="team-box">
               <img src="img/team/team1.jpg" alt="Matthew Dix picture" />
-              <div class="slide2">
+              <div class="slide2 show-modal1">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -386,7 +429,7 @@
             </div>
             <div class="team-box">
               <img src="img/team/team2.jpg" alt="Cristopher Campbell picture" />
-              <div class="slide2">
+              <div class="slide2 show-modal2">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -409,7 +452,7 @@
             </div>
             <div class="team-box">
               <img src="img/team/team3.jpg" alt="Michael Fertig picture" />
-              <div class="slide2">
+              <div class="slide2 show-modal3">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -447,13 +490,41 @@
       </section>
       <!-- SECTION LOGO -->
       <section class="section-logo">
-        <div class="container logos">
-          <img src="img/logos/logo1.png" alt="Logo 1" />
+        <div class="swiper container logos">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/logos/logo1.png" alt="Logo 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo2.png" alt="Logo 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo3.png" alt="Logo 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo4.png" alt="Logo 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo5.png" alt="Logo 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo6.png" alt="Logo 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo7.png" alt="Logo 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/logo8.png" alt="Logo 8" />
+            </div>
+          </div>
+          <!-- <img src="img/logos/logo1.png" alt="Logo 1" />
           <img src="img/logos/logo2.png" alt="Logo 2" />
           <img src="img/logos/logo3.png" alt="Logo 3" />
           <img src="img/logos/logo4.png" alt="Logo 4" />
           <img src="img/logos/logo5.png" alt="Logo 5" />
           <img src="img/logos/logo6.png" alt="Logo 6" />
+          <img src="img/logos/logo7.png" alt="Logo 7" />
+          <img src="img/logos/logo8.png" alt="Logo 8" /> -->
         </div>
       </section>
       <!-- SECTION WORK -->
@@ -541,27 +612,67 @@
       </section>
       <!-- SECTION QUOTE 2 -->
       <section class="section-quote">
-        <div class="container quote-container">
-          <ion-icon class="left-arrow" name="chevron-back-outline"></ion-icon>
-          <img
-            class="image-quote"
-            src="img/quote-image.jpg"
-            alt="Image quote"
-          />
-          <div class="text-quote">
-            <blockquote>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              similique dicta excepturi sapiente error ullam ratione illum
-              voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
-              aspernatur vel nesciunt numquam expedita deserunt itaque."
-            </blockquote>
-            <div>
-              <hr class="quote-line" />
-              <p class="quote-name">Joshua Earle</p>
+        <div class="container quote-container2">
+          <ion-icon class="left-arrow2" name="chevron-back-outline"></ion-icon>
+          <div class="slide-quote2">
+            <img
+              class="image-quote"
+              src="img/quote-image.jpg"
+              alt="Image quote"
+            />
+            <div class="text-quote">
+              <blockquote>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                similique dicta excepturi sapiente error ullam ratione illum
+                voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
+                aspernatur vel nesciunt numquam expedita deserunt itaque."
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">Joshua Earle</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-quote2">
+            <img
+              class="image-quote"
+              src="img/quote-image2.jpg"
+              alt="Image quote"
+            />
+            <div class="text-quote">
+              <blockquote>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                similique dicta excepturi sapiente error ullam ratione illum
+                voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
+                aspernatur vel nesciunt numquam expedita deserunt itaque."
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">John Smith</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-quote2">
+            <img
+              class="image-quote"
+              src="img/quote-image3.jpg"
+              alt="Image quote"
+            />
+            <div class="text-quote">
+              <blockquote>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                similique dicta excepturi sapiente error ullam ratione illum
+                voluptatum obcaecati, molestiae dolorum blanditiis, laudantium
+                aspernatur vel nesciunt numquam expedita deserunt itaque."
+              </blockquote>
+              <div>
+                <hr class="quote-line" />
+                <p class="quote-name">Peter Garbrandt</p>
+              </div>
             </div>
           </div>
           <ion-icon
-            class="right-arrow"
+            class="right-arrow2"
             name="chevron-forward-outline"
           ></ion-icon>
         </div>
@@ -862,6 +973,95 @@
         </p>
       </div>
     </footer>
+    <!-- MODALS -->
+    <div class="modal1 hidden">
+      <button class="close-modal1">&times;</button>
+      <p class="heading-description-modal">Matthew Dix</p>
+      <h2 class="heading-secondary-modal">Graphic Design</h2>
+      <p class="modal-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusamus
+        voluptatem voluptate nesciunt, possimus dolorem rem quidem veniam culpa
+        laboriosam tempore nulla. Suscipit eligendi incidunt nam excepturi
+        soluta voluptatibus ullam! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Obcaecati ad consequatur reiciendis, natus sint minus
+        error provident laboriosam possimus! Eos similique perferendis minima
+        repellendus doloribus dolor, voluptatum non vero consectetur. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Dolorum unde
+        distinctio cupiditate quasi quia labore? Provident quasi sequi est natus
+        molestiae laudantium, necessitatibus temporibus repudiandae animi aut
+        hic. Tenetur, reiciendis. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Illum ab laborum autem, reiciendis earum eum tenetur
+        delectus ut facilis maxime eius sequi veniam totam? Quas libero nulla
+        ratione ipsum officia. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Excepturi ratione aspernatur porro nisi esse facere!
+        Praesentium, iste illo perspiciatis aspernatur itaque quasi
+        necessitatibus explicabo maxime, repudiandae, consequatur eum at eos.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui excepturi
+        nesciunt, nostrum magnam vel, sapiente fuga ipsa atque mollitia odit,
+        explicabo repudiandae modi iste cupiditate quae nam autem numquam.
+      </p>
+    </div>
+    <div class="modal2 hidden">
+      <button class="close-modal2">&times;</button>
+      <p class="heading-description-modal">Cristopher Campbell</p>
+      <h2 class="heading-secondary-modal">Branding/UX Design</h2>
+      <p class="modal-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        voluptatem quam nostrum ea at maxime omnis dignissimos fugiat a aut,
+        laboriosam tempora eos et quasi fugit doloremque, aliquam, minima odio!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eius
+        sequi illo fuga placeat. Alias velit minima labore voluptatem numquam
+        quaerat. Itaque atque rerum quo, officia non dolor reprehenderit sed.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga mollitia
+        vitae architecto nihil consectetur, ex recusandae explicabo fugit.
+        Laborum ipsum dolorem, eum architecto deserunt rerum nisi inventore
+        aliquid aut voluptas? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Est nihil temporibus, recusandae earum aut maiores
+        natus asperiores quo tempora eaque, inventore sunt! Ad labore culpa
+        porro enim tempora nulla eos! Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Magni perferendis consequatur eligendi ex odit modi
+        corrupti provident similique, ducimus facilis soluta deleniti in
+        accusamus? Maiores nemo inventore ipsum distinctio hic? Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Esse adipisci perferendis
+        sint odio ratione, omnis modi dolor, incidunt voluptatibus unde ullam?
+        Omnis maxime facilis magni, sunt nisi blanditiis asperiores quia? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus
+        aperiam dolor optio illo. Quidem nostrum odit itaque qui laudantium sed
+        iusto, vel earum facere. Vitae quaerat expedita consequatur corporis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eos
+        vero, assumenda molestias quidem velit iure error deleniti consectetur
+        exercitationem iusto dolorem, sapiente explicabo veniam minima numquam
+        magni est voluptatem!
+      </p>
+    </div>
+    <div class="modal3 hidden">
+      <button class="close-modal3">&times;</button>
+      <p class="heading-description-modal">Michael Fertig</p>
+      <h2 class="heading-secondary-modal">Developer</h2>
+      <p class="modal-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nisi
+        at, distinctio velit minus assumenda ad deserunt minima fugiat quae
+        beatae, eum nihil molestias! Dolorum at iusto iure voluptatum
+        repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Animi quasi eos incidunt facilis illum corporis maiores nemo quis
+        molestias dolorum rerum unde dolores odit sed numquam nesciunt
+        laudantium, quo consequuntur! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptas harum repellendus illo! Ut omnis debitis
+        eveniet velit dolor, ipsam eius exercitationem laborum officiis
+        voluptatum culpa harum, voluptatem amet quas qui? Lorem ipsum, dolor sit
+        amet consectetur adipisicing elit. Obcaecati, dolorum itaque? Molestiae
+        laborum itaque explicabo ab obcaecati dolorem quas. Non iste quaerat
+        explicabo voluptates rem accusantium? Voluptatum vero recusandae
+        maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+        quam magni, earum iusto voluptate praesentium, aut laudantium
+        necessitatibus incidunt quidem ab corrupti doloribus obcaecati odit
+        illum? Incidunt animi nemo temporibus. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ex minima ad officiis deserunt illo.
+        Delectus quidem earum mollitia rerum, voluptatem voluptatibus error
+        eligendi aut aliquid adipisci, pariatur itaque cupiditate dolores.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <!-- ION Icons! -->
     <script
       type="module"
@@ -871,5 +1071,8 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- FOR SWIPER SCRIPT -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
