@@ -193,10 +193,10 @@ let swiper = new Swiper('.logos', {
   centeredSlides: true,
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     568: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     768: {
       slidesPerView: 4,

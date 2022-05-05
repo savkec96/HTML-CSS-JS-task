@@ -63,6 +63,10 @@
   .img-mobile {
     right: 15%;
   }
+  .logos img {
+    height: 15rem;
+    width: auto;
+  }
   .story-cont {
     gap: 2.4rem;
   }
@@ -148,9 +152,6 @@
   .footer-title1 {
     margin-bottom: 2.4rem;
   }
-  .logos img {
-    width: 13%;
-  }
 }
 @media (max-width: 54em) {
   .random-text-box {
@@ -182,6 +183,10 @@
   }
   .quote-name {
     font-size: 1.4rem;
+  }
+  .logos img {
+    height: 12rem;
+    width: auto;
   }
   .work-text1 {
     font-size: 1.2rem;
@@ -484,7 +489,8 @@
     padding: 2.4rem 0;
   }
   .logos img {
-    width: 14%;
+    height: 20rem;
+    width: auto;
   }
   .section-work {
     padding-top: 3.2rem;
