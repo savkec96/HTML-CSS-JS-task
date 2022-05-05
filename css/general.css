@@ -59,8 +59,13 @@ header.shadow {
   background: linear-gradient(#ff8787eb, #e6ca5ceb);
   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
 }
-header.shadow .navbar a {
+header.shadow .navbar a:link,
+header.shadow .navbar a:visited {
   color: #fff;
+}
+header.shadow .navbar a:hover,
+header.shadow .navbar a:active {
+  color: #ffe066;
 }
 header.shadow .logo {
   color: #fff;

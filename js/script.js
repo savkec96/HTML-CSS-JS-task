@@ -31,9 +31,18 @@ allLinks.forEach(function (link) {
 
 // For sticky navigation
 let headerNav = document.querySelector('.header');
+const sectionHero = document.querySelector('.section-hero');
 
 window.addEventListener('scroll', () => {
-  headerNav.classList.toggle('shadow', window.scrollY > 0);
+  headerNav.classList.toggle(
+    'shadow',
+    window.scrollY > `${sectionHero.clientHeight}` // 0
+  );
+  if (window.scrollY > `${sectionHero.clientHeight}`) {
+    headerNav.style.position = 'fixed';
+  } else {
+    headerNav.style.position = 'relative';
+  }
 });
 
 const accordion = document.querySelector('.accordion');
@@ -43,12 +52,18 @@ const itemPanel = document.querySelectorAll('.item');
 let i;
 
 // Accordion animation
-for (i = 0; i < itemPanel.length; i++) {
-  itemPanel[i].addEventListener('click', function () {
-    // console.log(e.target);
-    this.classList.toggle('open');
-  });
-}
+// for (i = 0; i < itemPanel.length; i++) {
+//   itemPanel[i].addEventListener('click', function () {
+//     // console.log(e.target);
+//     this.classList.toggle('open');
+//   });
+// }
+accordion.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.item');
+  if (!clicked) return;
+  itemPanel.forEach(i => i.classList.remove('open'));
+  clicked.classList.add('open');
+});
 
 // Slider animation
 const slides = document.querySelectorAll('.slide-quote');

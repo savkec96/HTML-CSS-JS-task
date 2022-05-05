@@ -6,7 +6,7 @@
   background-position: center;
 }
 header {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 2;
 }
@@ -92,7 +92,7 @@ header {
 /* SECTION HERO */
 /* /////////////////////////////////////////////////////////////// */
 .section-hero {
-  padding: 14.4rem 0 1.6rem 0;
+  padding: 6.4rem 0 1.6rem 0;
 }
 .hero {
   max-width: 120rem;
@@ -366,7 +366,7 @@ div.slide {
 }
 .open .hidden-box {
   display: block;
-  max-height: 10rem;
+  max-height: 17rem;
   overflow-y: scroll;
 }
 .hidden-box::-webkit-scrollbar {
