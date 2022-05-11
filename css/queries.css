@@ -63,9 +63,8 @@
   .img-mobile {
     right: 15%;
   }
-  .logos img {
-    height: 15rem;
-    width: auto;
+  .section-logo {
+    height: 26rem;
   }
   .story-cont {
     gap: 2.4rem;
@@ -184,9 +183,8 @@
   .quote-name {
     font-size: 1.4rem;
   }
-  .logos img {
-    height: 12rem;
-    width: auto;
+  .section-logo {
+    height: 24rem;
   }
   .work-text1 {
     font-size: 1.2rem;
@@ -313,6 +311,7 @@
   }
   .section-logo {
     padding: 3.2rem 0;
+    height: 23rem;
   }
   .section-work {
     padding-top: 4.8rem;
@@ -487,10 +486,6 @@
   }
   .section-logo {
     padding: 2.4rem 0;
-  }
-  .logos img {
-    height: 20rem;
-    width: auto;
   }
   .section-work {
     padding-top: 3.2rem;

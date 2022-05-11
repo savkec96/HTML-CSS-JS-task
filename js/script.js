@@ -1,208 +1,242 @@
 'use strict';
-// MENU ICON
-const btnNavbar = document.querySelector('.menu-btn');
+
 const headerEl = document.querySelector('.header');
-btnNavbar.addEventListener('click', function () {
-  headerEl.classList.toggle('nav-open');
-});
+
+function initHeaderNavIconOpen() {
+  const btnNavbar = document.querySelector('.menu-btn');
+  btnNavbar.addEventListener('click', function () {
+    headerEl.classList.toggle('nav-open');
+  });
+}
+
+initHeaderNavIconOpen();
 
 //Smooth scrolling animation
-const allLinks = document.querySelectorAll('a:link');
-allLinks.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-
-    if (href === '#')
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    if (href !== '#' && href.startsWith('#')) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({
-        behavior: 'smooth',
-      });
-    }
-    if (link.classList.contains('nav-link'))
-      headerEl.classList.toggle('nav-open');
-  });
-});
-
-// For sticky navigation
-let headerNav = document.querySelector('.header');
-const sectionHero = document.querySelector('.section-hero');
-
-window.addEventListener('scroll', () => {
-  headerNav.classList.toggle(
-    'shadow',
-    window.scrollY > `${sectionHero.clientHeight}` // 0
-  );
-  if (window.scrollY > `${sectionHero.clientHeight}`) {
-    headerNav.style.position = 'fixed';
-  } else {
-    headerNav.style.position = 'relative';
+document.querySelector('.nav-list').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav-link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
   }
 });
 
-const accordion = document.querySelector('.accordion');
-const arrowPanel = document.querySelectorAll('.arrow');
-const itemPanel = document.querySelectorAll('.item');
-// const box = document.querySelectorAll('.hidden-box');
-let i;
+// For sticky navigation
+function initStickyNav() {
+  window.addEventListener('scroll', () => {
+    const sectionHero = document.querySelector('.section-hero');
+    headerEl.classList.toggle(
+      'shadow',
+      window.scrollY > `${sectionHero.clientHeight}` // 0
+    );
+    if (window.scrollY > `${sectionHero.clientHeight}`) {
+      headerEl.style.position = 'fixed';
+    } else {
+      headerEl.style.position = 'relative';
+    }
+  });
+}
 
-// Accordion animation
-// for (i = 0; i < itemPanel.length; i++) {
-//   itemPanel[i].addEventListener('click', function () {
-//     // console.log(e.target);
-//     this.classList.toggle('open');
-//   });
-// }
-accordion.addEventListener('click', function (e) {
-  const clicked = e.target.closest('.item');
-  if (!clicked) return;
-  itemPanel.forEach(i => i.classList.remove('open'));
-  clicked.classList.add('open');
-});
+initStickyNav();
+
+function initAccordion() {
+  const accordion = document.querySelector('.accordion');
+  accordion.addEventListener('click', function (e) {
+    const itemPanel = document.querySelectorAll('.item');
+    const clicked = e.target.closest('.item');
+    if (!clicked) return;
+    itemPanel.forEach(i => i.classList.remove('open'));
+    clicked.classList.add('open');
+  });
+}
+
+initAccordion();
 
 // Slider animation
 const slides = document.querySelectorAll('.slide-quote');
+const slides2 = document.querySelectorAll('.slide-quote2');
 const btnLeft = document.querySelector('.left-arrow');
 const btnRight = document.querySelector('.right-arrow');
+const btnLeft2 = document.querySelector('.left-arrow2');
+const btnRight2 = document.querySelector('.right-arrow2');
 let curSlide = 0;
-const maxSlides = slides.length;
 
-const goToSlide = function (slide) {
-  slides.forEach(
+function goToSlide(slide, slideNumber) {
+  slideNumber.forEach(
     (s, i) => (s.style.transform = `translateX(${130 * (i - slide)}%)`)
   );
-};
+}
 
-goToSlide(0);
+goToSlide(0, slides);
+goToSlide(0, slides2);
 
-const nextSlide = function () {
+function nextSlide(slideNumber) {
+  const maxSlides = slideNumber.length;
   if (curSlide === maxSlides - 1) {
     curSlide = 0;
   } else {
     curSlide++;
   }
-  goToSlide(curSlide);
-};
+  goToSlide(curSlide, slideNumber);
+}
 
-const prevSlide = function () {
+function prevSlide(slideNumber) {
+  const maxSlides = slideNumber.length;
   if (curSlide === 0) {
     curSlide = maxSlides - 1;
   } else {
     curSlide--;
   }
-  goToSlide(curSlide);
-};
+  goToSlide(curSlide, slideNumber);
+}
 
-btnLeft.addEventListener('click', prevSlide);
-btnRight.addEventListener('click', nextSlide);
-
-// Slider animation 2
-const slides2 = document.querySelectorAll('.slide-quote2');
-const btnLeft2 = document.querySelector('.left-arrow2');
-const btnRight2 = document.querySelector('.right-arrow2');
-const maxSlides2 = slides2.length;
-
-const goToSlide2 = function (slide2) {
-  slides2.forEach(
-    (s, i) => (s.style.transform = `translateX(${130 * (i - slide2)}%)`)
-  );
-};
-
-goToSlide2(0);
-
-const nextSlide2 = function () {
-  if (curSlide === maxSlides2 - 1) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-  goToSlide2(curSlide);
-};
-
-const prevSlide2 = function () {
-  if (curSlide === 0) {
-    curSlide = maxSlides2 - 1;
-  } else {
-    curSlide--;
-  }
-  goToSlide2(curSlide);
-};
-
-btnLeft2.addEventListener('click', prevSlide2);
-btnRight2.addEventListener('click', nextSlide2);
+btnLeft.addEventListener('click', function () {
+  prevSlide(slides);
+});
+btnRight.addEventListener('click', function () {
+  nextSlide(slides);
+});
+btnLeft2.addEventListener('click', function () {
+  prevSlide(slides2);
+});
+btnRight2.addEventListener('click', function () {
+  nextSlide(slides2);
+});
 
 // Modal animation
-const modal1 = document.querySelector('.modal1');
-const modal2 = document.querySelector('.modal2');
-const modal3 = document.querySelector('.modal3');
+const modal = document.querySelectorAll('.modal');
+const btnCloseModal = document.querySelector('.close-modal');
 const overlay = document.querySelector('.overlay');
-const btnCloseModal1 = document.querySelector('.close-modal1');
-const btnCloseModal2 = document.querySelector('.close-modal2');
-const btnCloseModal3 = document.querySelector('.close-modal3');
-const openModal1 = document.querySelector('.show-modal1');
-const openModal2 = document.querySelector('.show-modal2');
-const openModal3 = document.querySelector('.show-modal3');
+const btnsOpenModal = document.querySelectorAll('.show-modal');
 
-const openingModal1 = function () {
-  modal1.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
-const openingModal2 = function () {
-  modal2.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
-const openingModal3 = function () {
-  modal3.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+// const openingModal = function (e) {
+//   e.preventDefault();
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
 
-const closingModal1 = function () {
-  modal1.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-const closingModal2 = function () {
-  modal2.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-const closingModal3 = function () {
-  modal3.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
+// const openingModal = function () {
+//   for (let i = 0; i < modal.length; i++) {
+//     // if (
+//     //   modal[i].getAttribute('data-name') == 'matthew' &&
+//     //   modal[i].clicked == true
+//     // ) {
+//     //   modal[i].classList.remove('hidden');
+//     // } else if (
+//     //   modal[i].getAttribute('data-name') == 'cristopher' &&
+//     //   modal[i].clicked == true
+//     // ) {
+//     //   modal[i].classList.remove('hidden');
+//     // } else if (
+//     //   modal[i].getAttribute('data-name') == 'michael' &&
+//     //   modal[i].clicked == true
+//     // ) {
+//     //   modal[i].classList.remove('hidden');
+//     // }
+//     overlay.classList.remove('hidden');
+//   }
+// };
 
-openModal1.addEventListener('click', openingModal1);
-openModal2.addEventListener('click', openingModal2);
-openModal3.addEventListener('click', openingModal3);
+// const closeModal = function () {
+//   modal.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// };
 
-btnCloseModal1.addEventListener('click', closingModal1);
-btnCloseModal2.addEventListener('click', closingModal2);
-btnCloseModal3.addEventListener('click', closingModal3);
+// btnsOpenModal.addEventListener('click', openingModal);
 
-// SWIPER
-let swiper = new Swiper('.logos', {
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  centeredSlides: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 3,
-    },
-    568: {
-      slidesPerView: 3,
-    },
-    768: {
-      slidesPerView: 4,
-    },
-    968: {
-      slidesPerView: 6,
-    },
-  },
+// btnCloseModal.addEventListener('click', closeModal);
+
+/////////////////////////////////// OVAKO RADI ALI NIJE CISTO!!!! ///////////////////////////////////////////
+
+// const modal1 = document.querySelector('.modal1');
+// const modal2 = document.querySelector('.modal2');
+// const modal3 = document.querySelector('.modal3');
+// const overlay = document.querySelector('.overlay');
+// const btnCloseModal1 = document.querySelector('.close-modal1');
+// const btnCloseModal2 = document.querySelector('.close-modal2');
+// const btnCloseModal3 = document.querySelector('.close-modal3');
+// const openModal1 = document.querySelector('.show-modal1');
+// const openModal2 = document.querySelector('.show-modal2');
+// const openModal3 = document.querySelector('.show-modal3');
+
+// const openingModal1 = function () {
+//   modal1.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
+// const openingModal2 = function () {
+//   modal2.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
+// const openingModal3 = function () {
+//   modal3.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
+
+// const closingModal1 = function () {
+//   modal1.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// };
+// const closingModal2 = function () {
+//   modal2.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// };
+// const closingModal3 = function () {
+//   modal3.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// };
+
+// openModal1.addEventListener('click', openingModal1);
+// openModal2.addEventListener('click', openingModal2);
+// openModal3.addEventListener('click', openingModal3);
+
+// btnCloseModal1.addEventListener('click', closingModal1);
+// btnCloseModal2.addEventListener('click', closingModal2);
+// btnCloseModal3.addEventListener('click', closingModal3);
+
+let slider = document.querySelector('.sliders');
+let innerSlider = document.querySelector('.slide-track');
+
+let pressed = false;
+let startx;
+let x;
+
+slider.addEventListener('mousedown', e => {
+  pressed = true;
+  startx = e.offsetX - innerSlider.offsetLeft;
+  slider.style.cursor = `grabbing`;
 });
+
+slider.addEventListener('mouseenter', () => {
+  slider.style.cursor = `grab`;
+});
+
+slider.addEventListener('mouseup', () => {
+  slider.style.cursor = `grab`;
+});
+
+window.addEventListener('mouseup', () => {
+  pressed = false;
+});
+
+slider.addEventListener('mousemove', e => {
+  if (!pressed) return;
+  e.preventDefault();
+
+  x = e.offsetX;
+
+  innerSlider.style.left = `${x - startx}px`;
+
+  checkboundary();
+});
+
+function checkboundary() {
+  let outer = slider.getBoundingClientRect();
+  let inner = innerSlider.getBoundingClientRect();
+
+  if (parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = '0px';
+  } else if (inner.right < outer.right) {
+    innerSlider.style.left = `-${inner.width - outer.width}px`;
+  }
+}

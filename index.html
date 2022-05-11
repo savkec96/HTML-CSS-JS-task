@@ -16,10 +16,10 @@
       rel="stylesheet"
     />
     <!-- Link Swiper's CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    /> -->
     <!-- //////////////////////////////////////// -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -406,7 +406,7 @@
           <div class="team-img-box">
             <div class="team-box">
               <img src="img/team/team1.jpg" alt="Matthew Dix picture" />
-              <div class="slide2 show-modal1">
+              <div class="slide2 show-modal">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -429,7 +429,7 @@
             </div>
             <div class="team-box">
               <img src="img/team/team2.jpg" alt="Cristopher Campbell picture" />
-              <div class="slide2 show-modal2">
+              <div class="slide2 show-modal">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -452,7 +452,7 @@
             </div>
             <div class="team-box">
               <img src="img/team/team3.jpg" alt="Michael Fertig picture" />
-              <div class="slide2 show-modal3">
+              <div class="slide2 show-modal">
                 <a class="icon" href="#"
                   ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
                 ></a>
@@ -490,31 +490,33 @@
       </section>
       <!-- SECTION LOGO -->
       <section class="section-logo">
-        <div class="swiper container logos">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/logos/logo1.png" alt="Logo 1" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo2.png" alt="Logo 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo3.png" alt="Logo 3" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo4.png" alt="Logo 4" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo5.png" alt="Logo 5" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo6.png" alt="Logo 6" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo7.png" alt="Logo 7" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/logos/logo8.png" alt="Logo 8" />
+        <div class="container logos">
+          <div class="sliders">
+            <div class="slide-track">
+              <div class="slider">
+                <img src="img/logos/logo1.png" alt="Logo 1" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo2.png" alt="Logo 2" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo3.png" alt="Logo 3" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo4.png" alt="Logo 4" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo5.png" alt="Logo 5" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo6.png" alt="Logo 6" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo7.png" alt="Logo 7" />
+              </div>
+              <div class="slider">
+                <img src="img/logos/logo8.png" alt="Logo 8" />
+              </div>
             </div>
           </div>
         </div>
@@ -604,7 +606,7 @@
       </section>
       <!-- SECTION QUOTE 2 -->
       <section class="section-quote">
-        <div class="container quote-container2">
+        <div class="container quote-container">
           <ion-icon class="left-arrow2" name="chevron-back-outline"></ion-icon>
           <div class="slide-quote2">
             <img
@@ -966,8 +968,8 @@
       </div>
     </footer>
     <!-- MODALS -->
-    <div class="modal1 hidden">
-      <button class="close-modal1">&times;</button>
+    <div class="modal hidden" data-name="matthew">
+      <button class="close-modal">&times;</button>
       <p class="heading-description-modal">Matthew Dix</p>
       <h2 class="heading-secondary-modal">Graphic Design</h2>
       <p class="modal-text">
@@ -993,8 +995,8 @@
         explicabo repudiandae modi iste cupiditate quae nam autem numquam.
       </p>
     </div>
-    <div class="modal2 hidden">
-      <button class="close-modal2">&times;</button>
+    <div class="modal hidden" data-name="cristopher">
+      <button class="close-modal">&times;</button>
       <p class="heading-description-modal">Cristopher Campbell</p>
       <h2 class="heading-secondary-modal">Branding/UX Design</h2>
       <p class="modal-text">
@@ -1026,8 +1028,8 @@
         magni est voluptatem!
       </p>
     </div>
-    <div class="modal3 hidden">
-      <button class="close-modal3">&times;</button>
+    <div class="modal hidden" data-name="michael">
+      <button class="close-modal">&times;</button>
       <p class="heading-description-modal">Michael Fertig</p>
       <h2 class="heading-secondary-modal">Developer</h2>
       <p class="modal-text">
@@ -1064,7 +1066,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- FOR SWIPER SCRIPT -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="js/script.js"></script>
   </body>
 </html>

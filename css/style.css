@@ -393,7 +393,7 @@ div.slide {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 11rem;
+  height: 14rem;
   gap: 4.8rem;
   position: relative;
   overflow: hidden;
@@ -537,15 +537,33 @@ div.slide {
 .section-logo {
   padding: 4.8rem 0;
   background-color: #f8f9fa;
+  height: 27rem;
 }
 .logos {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  position: relative;
 }
-.logos img {
-  width: 70%;
-  object-fit: cover;
+.sliders {
+  position: absolute;
+  width: 90%;
+  height: 20rem;
+  overflow: hidden;
+}
+.slide-track {
+  position: absolute;
+  width: calc(20rem * 8);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3rem;
+  pointer-events: none;
+  transition: 0s ease-in;
+}
+.slider {
+  width: 90%;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  /* pointer-events: auto; */
 }
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION WORK */
@@ -623,7 +641,7 @@ div.slide {
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION QUOTE 2 */
 /* /////////////////////////////////////////////////////////////// */
-.quote-container2 {
+/* .quote-container2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -632,7 +650,7 @@ div.slide {
   gap: 2.4rem;
   position: relative;
   overflow: hidden;
-}
+}*/
 .slide-quote2 {
   position: absolute;
   width: 70%;
@@ -640,9 +658,29 @@ div.slide {
   gap: 2.4rem;
   align-items: center;
   justify-content: center;
-  /* For JS animation! */
   transition: transform 1s;
 }
+.left-arrow2 {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  width: 6.2rem;
+  height: 6.2rem;
+  color: #adb5bd;
+  cursor: pointer;
+}
+.right-arrow2 {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translate(50%, -50%);
+  width: 6.2rem;
+  height: 6.2rem;
+  color: #adb5bd;
+  cursor: pointer;
+}
+/*
 .left-arrow2 {
   position: absolute;
   top: 50%;
@@ -662,10 +700,11 @@ div.slide {
   height: 6.2rem;
   color: #adb5bd;
   cursor: pointer;
-}
+} */
 .image-quote {
-  width: 15%;
+  width: 22%;
   border-radius: 50%;
+  padding: 0 3.2rem;
 }
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION TESTIMONIALS */
@@ -984,9 +1023,7 @@ div.slide {
   color: #e03131;
 }
 /* MODAL DESIGN */
-.close-modal1,
-.close-modal2,
-.close-modal3 {
+.close-modal {
   position: absolute;
   top: 1.2rem;
   right: 2rem;
@@ -996,9 +1033,7 @@ div.slide {
   border: none;
   background: none;
 }
-.modal1,
-.modal2,
-.modal3 {
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
