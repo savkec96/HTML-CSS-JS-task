@@ -104,11 +104,60 @@ btnRight2.addEventListener('click', function () {
   nextSlide(slides2);
 });
 
+// Swiper animation
+
+let slider = document.querySelector('.sliders');
+let innerSlider = document.querySelector('.slide-track');
+
+let pressed = false;
+let startx;
+let x;
+
+slider.addEventListener('mousedown', e => {
+  pressed = true;
+  startx = e.offsetX - innerSlider.offsetLeft;
+  slider.style.cursor = `grabbing`;
+});
+
+slider.addEventListener('mouseenter', () => {
+  slider.style.cursor = `grab`;
+});
+
+slider.addEventListener('mouseup', () => {
+  slider.style.cursor = `grab`;
+});
+
+window.addEventListener('mouseup', () => {
+  pressed = false;
+});
+
+slider.addEventListener('mousemove', e => {
+  if (!pressed) return;
+  e.preventDefault();
+
+  x = e.offsetX;
+
+  innerSlider.style.left = `${x - startx}px`;
+
+  checkboundary();
+});
+
+function checkboundary() {
+  let outer = slider.getBoundingClientRect();
+  let inner = innerSlider.getBoundingClientRect();
+
+  if (parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = '0px';
+  } else if (inner.right < outer.right) {
+    innerSlider.style.left = `-${inner.width - outer.width}px`;
+  }
+}
+
 // Modal animation
-const modal = document.querySelectorAll('.modal');
-const btnCloseModal = document.querySelector('.close-modal');
-const overlay = document.querySelector('.overlay');
-const btnsOpenModal = document.querySelectorAll('.show-modal');
+// const modal = document.querySelectorAll('.modal');
+// const btnCloseModal = document.querySelector('.close-modal');
+// const overlay = document.querySelector('.overlay');
+// const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 // const openingModal = function (e) {
 //   e.preventDefault();
@@ -116,24 +165,16 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 //   overlay.classList.remove('hidden');
 // };
 
-// const openingModal = function () {
+// const openingModal = function (e) {
+//   e.preventDefault();
 //   for (let i = 0; i < modal.length; i++) {
-//     // if (
-//     //   modal[i].getAttribute('data-name') == 'matthew' &&
-//     //   modal[i].clicked == true
-//     // ) {
-//     //   modal[i].classList.remove('hidden');
-//     // } else if (
-//     //   modal[i].getAttribute('data-name') == 'cristopher' &&
-//     //   modal[i].clicked == true
-//     // ) {
-//     //   modal[i].classList.remove('hidden');
-//     // } else if (
-//     //   modal[i].getAttribute('data-name') == 'michael' &&
-//     //   modal[i].clicked == true
-//     // ) {
-//     //   modal[i].classList.remove('hidden');
-//     // }
+//     if (modal[i].getAttribute('data-name') == 'matthew') {
+//       modal[i].classList.remove('hidden');
+//     } else if (modal[i].getAttribute('data-name') == 'cristopher') {
+//       modal[i].classList.remove('hidden');
+//     } else if (modal[i].getAttribute('data-name') == 'michael') {
+//       modal[i].classList.remove('hidden');
+//     }
 //     overlay.classList.remove('hidden');
 //   }
 // };
@@ -193,50 +234,3 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 // btnCloseModal1.addEventListener('click', closingModal1);
 // btnCloseModal2.addEventListener('click', closingModal2);
 // btnCloseModal3.addEventListener('click', closingModal3);
-
-let slider = document.querySelector('.sliders');
-let innerSlider = document.querySelector('.slide-track');
-
-let pressed = false;
-let startx;
-let x;
-
-slider.addEventListener('mousedown', e => {
-  pressed = true;
-  startx = e.offsetX - innerSlider.offsetLeft;
-  slider.style.cursor = `grabbing`;
-});
-
-slider.addEventListener('mouseenter', () => {
-  slider.style.cursor = `grab`;
-});
-
-slider.addEventListener('mouseup', () => {
-  slider.style.cursor = `grab`;
-});
-
-window.addEventListener('mouseup', () => {
-  pressed = false;
-});
-
-slider.addEventListener('mousemove', e => {
-  if (!pressed) return;
-  e.preventDefault();
-
-  x = e.offsetX;
-
-  innerSlider.style.left = `${x - startx}px`;
-
-  checkboundary();
-});
-
-function checkboundary() {
-  let outer = slider.getBoundingClientRect();
-  let inner = innerSlider.getBoundingClientRect();
-
-  if (parseInt(innerSlider.style.left) > 0) {
-    innerSlider.style.left = '0px';
-  } else if (inner.right < outer.right) {
-    innerSlider.style.left = `-${inner.width - outer.width}px`;
-  }
-}
