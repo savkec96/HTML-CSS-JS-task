@@ -9,7 +9,17 @@ function initHeaderNavIconOpen() {
   });
 }
 
+function initNavBarClose() {
+  const linkNavBar = document.querySelectorAll('.nav-link');
+  linkNavBar.forEach(link =>
+    link.addEventListener('click', function () {
+      headerEl.classList.toggle('nav-open');
+    })
+  );
+}
+
 initHeaderNavIconOpen();
+initNavBarClose();
 
 //Smooth scrolling animation
 document.querySelector('.nav-list').addEventListener('click', function (e) {
