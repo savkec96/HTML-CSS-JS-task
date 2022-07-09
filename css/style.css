@@ -429,12 +429,12 @@ div.slide {
   transition: transform 1s;
 }
 .chat-icon {
-  width: 9.8rem;
+  width: 15.8rem;
   height: 9.8rem;
   color: #63e6be;
   border: 3px solid #63e6be;
   border-radius: 0.5rem;
-  padding: 0 3.2rem;
+  padding: 1.2rem 3.2rem;
 }
 .text-quote blockquote {
   font-size: 1.6rem;
@@ -704,7 +704,7 @@ div.slide {
 .image-quote {
   width: 22%;
   border-radius: 50%;
-  padding: 0 3.2rem;
+  padding: 0 2.4rem;
 }
 /* /////////////////////////////////////////////////////////////// */
 /* SECTION TESTIMONIALS */
