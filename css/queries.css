@@ -306,6 +306,9 @@
   }
 }
 @media (max-width: 31.25em) {
+  html {
+    font-size: 42.25%;
+  }
   .hero-description {
     font-size: 3.8rem;
     margin-bottom: 2.4rem;
@@ -377,9 +380,6 @@
   }
 }
 @media (max-width: 28.125em) {
-  html {
-    font-size: 42.25%;
-  }
   .heading-primary {
     font-size: 6.8rem;
   }
