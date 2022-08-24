@@ -375,6 +375,9 @@
     width: 27%;
     padding: 0;
   }
+  .ribbon {
+    top: 50%;
+  }
   .first-footer .footer-part {
     width: 90%;
   }
