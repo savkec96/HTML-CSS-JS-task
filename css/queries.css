@@ -186,6 +186,8 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1.2rem;
     column-gap: 1.2rem;
+    justify-items: center;
+    align-items: center;
   }
   .feature-icon {
     width: 7.5rem;
@@ -277,6 +279,9 @@
   }
 }
 @media (max-width: 34.375em) {
+  .random-text-box {
+    width: 80%;
+  }
   .section-design {
     height: 46rem;
   }
