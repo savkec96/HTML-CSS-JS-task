@@ -183,10 +183,11 @@
 }
 @media (max-width: 43.75em) {
   .features-box {
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 2.4rem;
-    column-gap: 0.6rem;
-    justify-items: center;
+    row-gap: 1.2rem;
+    column-gap: 1.2rem;
+    /* justify-items: center; */
     /* align-items: center; */
   }
   .feature-icon {
