@@ -363,10 +363,12 @@
     width: 1.8rem;
   }
   .work-text1 {
-    font-size: 0.6rem;
+    top: 60%;
+    font-size: 0.8rem;
   }
   .work-text2 {
-    font-size: 0.6rem;
+    top: 73%;
+    font-size: 0.8rem;
   }
   .image-quote {
     width: 27%;
