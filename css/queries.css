@@ -359,16 +359,17 @@
     grid-template-columns: 60%;
   }
   .work-icon {
-    height: 1.8rem;
-    width: 1.8rem;
+    top: 32%;
+    height: 1.6rem;
+    width: 1.6rem;
   }
   .work-text1 {
-    top: 60%;
-    font-size: 0.8rem;
+    top: 58%;
+    font-size: 0.4rem;
   }
   .work-text2 {
     top: 73%;
-    font-size: 0.8rem;
+    font-size: 0.4rem;
   }
   .image-quote {
     width: 27%;
