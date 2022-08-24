@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+/* COMPONENTS */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 6.4rem;
+}
+hr {
+  width: 4.4rem;
+  height: 0.2rem;
+  margin: 3.2rem auto;
+  background-color: #fa5252;
+  border: none;
+}
+/* FOR TEXT AND HEADINGS IN SECTION */
+.random-text-box {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.heading-description {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.6rem;
+  color: #343a40;
+  margin-bottom: 1.2rem;
+}
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: #343a40;
+}
+.random-text {
+  color: #868e96;
+  font-size: 1.2rem;
+  margin-bottom: 6.4rem;
+}
+/* FOR SECTIONS RANDOM */
+.section-random {
+  padding: 6.4rem 0;
+}
+/* FOR HIDDEN MODAL */
+.hidden {
+  display: none;
+}
+/* FOR HEADER SHADOW */
+header.shadow {
+  background: linear-gradient(#ff8787eb, #e6ca5ceb);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+header.shadow .navbar a:link,
+header.shadow .navbar a:visited {
+  color: #fff;
+}
+header.shadow .navbar a:hover,
+header.shadow .navbar a:active {
+  color: #ffe066;
+}
+header.shadow .logo {
+  color: #fff;
+}
