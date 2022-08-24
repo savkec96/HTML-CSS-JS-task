@@ -327,10 +327,16 @@
   .about-img-box .img-box {
     width: 60%;
   }
-  .feature-icon {
+  /* .features-box {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1.2rem;
+    column-gap: 1.2rem;
+  } */
+  /* .feature-icon {
     width: 9rem;
     height: 9rem;
-  }
+  } */
   .feature-title {
     margin-bottom: 0.4rem;
   }
