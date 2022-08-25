@@ -329,6 +329,9 @@
   .about-img-box .img-box {
     width: 60%;
   }
+  .section-stats .container {
+    padding: 0;
+  }
   .features-box {
     grid-template-columns: repeat(1, 1fr);
   }
