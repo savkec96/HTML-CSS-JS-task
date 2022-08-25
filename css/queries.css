@@ -393,7 +393,7 @@
     font-size: 6.8rem;
   }
   .about-img-box .img-box {
-    width: 70%;
+    width: 80%;
   }
   .number-stat {
     font-size: 4.8rem;
@@ -416,9 +416,6 @@
   }
 }
 @media (max-width: 25em) {
-  .about-img-box .img-box {
-    width: 80%;
-  }
   .team-img-box {
     grid-template-columns: 80%;
   }
